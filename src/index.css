@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body,html{
-    background-color: #0c7970;
-    font-family: 'Montserrat', sans-serif !important;
+    background-color:#d9d9d953;
+    /* font-family: 'Montserrat', sans-serif !important; */
 }
 
 
 *{
   margin: 0;
   padding: 0%;
-  font-family: 'Montserrat', sans-serif !important;
+  /* font-family: 'Montserrat', sans-serif !important; */
   box-sizing: border-box;
   /* color: #363636 !important; */
 }
@@ -270,12 +270,11 @@ textarea{
 
 
 
-.text-secondary{
-  color: #eb1414;
-}
-
 .text-primary{
-  color: #047021;
+  color: #000000;
+  font-weight: bolder !important;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
 
 
@@ -287,9 +286,306 @@ color: white;
 
 
 .background-navbar{
-  background-color: #8ee442b5;
+  background-color: lightgray ;
+}
+
+.info-bakchground, .particulardoc{
+  background-color: grey;
+}
+
+
+.profile{
+  color:#000000;
+  /* font-weight: 400; */
+}
+
+.icon{
+  color: #1f6fb0;
+  height:31%;
+}
+
+.logout{
+  color: #8d0202b5;
+  height:100%
+}
+
+
+
+
+
+/* ---------------------inside details---------------------- */
+
+.app, Table{
+  background-color: grey;
+  color: rgb(18, 6, 67);
+    text-shadow: 2px 2px 4px rgba(152, 18, 18, 0.2);
+    font-weight: 600;
+  font-weight: 600%;
+} 
+
+.detaildiv, Table{
+  background-color: grey;
+}
+
+.docname, .profilename {
+  font-weight: 600%;
+  color: rgb(46, 29, 29);
+  text-shadow: 2px 2px 4px rgba(152, 18, 18, 0.2);
+ }
+
+
+  .label {
+color: rgb(18, 6, 67);
+    text-shadow: 2px 2px 4px rgba(152, 18, 18, 0.2);
+    font-weight: 600;
+}
+
+
+ .fill{
+color: rgb(255, 255, 255);
+}  
+
+
+
+
+
+
+/* --------phone------- */
+/* flex classes */
+
+@media (max-width: 764px) {
+
+  .flex {
+    display: flex !important;
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+  }
+
+  .justify-between {
+    justify-content: center !important; /* Center content horizontally */
+  }
+
+  .items-center {
+    align-items: center !important; 
+   } 
+
+  .items-end {
+    align-items: center !important; /* Center items vertically */
+  }
+
+  .gap-1, .gap-2, .gap-3 {
+    gap: 0; /* No gap for smaller screens */
+  }
+
+ 
+
+ 
+  .p-2 {
+    padding: 10px; 
+  }
+
+  .m-1, .m-2, .m-3 {
+    margin: 10px 0; /* Vertical margin for smaller screens */
+  }
+
+  .py-1, .py-2, .py-3 {
+    padding-top: 10px;
+    padding-bottom: 10px; /* Reduced vertical padding for smaller screens */
+  }
+
+  /* .my-1, .my-2, .my-3 {
+    margin-top: 10px;
+    margin-bottom: 10px;  */
+
+  /* } */
+
+  /* form-element */
+  input, textarea, select {
+    height: 45px;
+    width: 100%;
+    /* padding-left: 15px;
+    border-radius: 4px; */
+  }
+
+
+  /* contained-btn */
+  .contained-btn, .outlined-btn {
+    height: 45px !important;
+    text-transform: uppercase;
+    /* padding: 0 20px; */
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  /* antd overriding */
+  .ant-form-item {
+    margin-bottom: 8px !important;
+  }
+
+  /* spinner */
+  .spinner-parent {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b5;
+    z-index: 999;
+  }
+
+  .fit-content {
+    font-size: small;
+    width: fit-content;
+  }
+
+  h2{
+    font-size: 15px;
+    width:fit-content
+  }
+
+  .w-full {
+}
+
+
+  .info-bakchground .label {
+    font-size: 9px;
+}
+
+
+.info-bakchground .fill{
+   font-size: 9px;
+}
+
+
+  /* Adjust the header section */
+.header {
+    display: flex;
+    justify-content: space-between; /* To push the elements to the ends */
+    align-items: center; /* To vertically center the items */
+}
+
+/* Style the right div */
+.right-div {
+    display: flex;
+    gap: 10px; /* Adjust the gap between elements */
+    align-items: center; /* To vertically center the items */
+}
+
+
+
+
+
+.header {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  justify-content: space-between; /* To push the elements to the ends */
+  align-items: center; /* To vertically center the items */
+  gap: 20px; /* Adjust the gap between columns */
+}
+
+/* Style the right div */
+.right-div,.items-center {
+   display: grid !important;
+  grid-template-columns: 0.3fr 0.3fr; /* Two columns with equal width */
+  align-items: center; /* To vertically center the items */
+  padding-right: 0%;
+  margin-right: 0%;
+}
+
+
+
+  .label {
+    font-size: 15px
+}
+
+
+ .fill{
+   font-size:10px;
+}  
+
+
+Table, .app{
+  display: grid !important;
+  /* grid-template-columns: 1fr !important; */
+ /* font-size:12px; */
+ overflow-x: auto;
+}
+
+.app{
+  /* width: 100px !important; */
+  font-size: 3px;
+  overflow-x: auto;
+}
+
+
+
+.register{
+  width:100% !important;
+  padding: 0% !important;
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+  align-items: center;
+}
+
+body{
+  width:100% !important
+}
+.h-screen{
+  width:auto;
+  width:fit-content
+}
+
+
+.detaildiv{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  font-size: 6px;
+}
+
+
+
+.background-navbar{
+  font-size: 12px
 }
 
 .info-bakchground{
-  background-color: #b4afaf;
+  background-color: grey;
 }
+
+
+.profile{
+  font-size: 21px !important
+}
+
+.icon{
+  font-size: 21px !important
+}
+
+.logout{
+  font-size:21px !important
+}
+
+
+.text-primary{
+  width: 200%;
+  font-size: 19px;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+
+.particulardoc .detaildiv .fill{
+   font-size: 15px;
+}
+
+.div{
+  width:100%;
+  padding-right: 2%;
+}
+}
+
+/* text-primary */

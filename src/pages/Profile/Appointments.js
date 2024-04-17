@@ -53,6 +53,7 @@ function Appointments() {
   }
 
   const columns = [
+    
     {
       title : "Date",
       dataIndex : "date",
@@ -89,7 +90,7 @@ function Appointments() {
 
         if(record.status === "pending" && user.role === "doctor"){
           return (
-            <div className='flex gap-1'>
+            <div className='flex gap-1' >
               <span className='underline cursor-pointer'
                    onClick={(e) => onUpdate(record.id, "cancelled")}
               > 
@@ -114,8 +115,8 @@ useEffect(()=>{
 
 
 return (
-  <div>
-    <Table columns={columns} dataSource={appointments || [] }/>
+  <div className="app" style={{ backgroundColor: "rgb(123, 100, 144)" }} >
+    <Table columns={columns } dataSource={appointments || [] } />
   </div>
 )
 

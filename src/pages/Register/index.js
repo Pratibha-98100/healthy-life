@@ -5,7 +5,7 @@ import { CreatUser } from '../../apicalls/users';
 import { useDispatch } from 'react-redux';
 import { ShowLoader } from '../../redux/loaderSlice';
 
-
+import "./index.css"
 function Register() {
 
     const navigate = useNavigate();
@@ -46,7 +46,7 @@ function Register() {
 
   return (
     <div className='flex justify-center items-center h-screen'>
-        <Form layout="vertical" className='w-400 bg-white p-2' onFinish={onFinish} >
+        <Form layout="vertical" className='w-400 bg-white p-2' onFinish={onFinish}  id='register'>
 
             <h2 className='uppercase my-1'> 
                 <strong>Healthy-Life  Register</strong>
@@ -65,7 +65,7 @@ function Register() {
                 <input type='password' />
             </Form.Item>
 
-            <button className='contained-btn my-1 w-full' type='submit' >Register</button>
+            <button className='contained-btn my-1 w-full btn' type='submit' >Register</button>
 
             <Link className='underline' to="/login">
                 Already have a account ? <strong>Sign In</strong>

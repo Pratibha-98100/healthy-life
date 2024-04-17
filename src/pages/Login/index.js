@@ -5,7 +5,6 @@ import { LoginUser } from '../../apicalls/users';
 import { ShowLoader } from '../../redux/loaderSlice';
 import { useDispatch } from 'react-redux';
 
-
 function Login() {
     
     const navigate = useNavigate();
@@ -49,7 +48,7 @@ function Login() {
 
   return (
     <div className='flex justify-center items-center h-screen' style={{backgroundImage: "url(https://img.freepik.com/premium-vector/cartoon-young-doctor-his-office-room_43633-11096.jpg)", backgroundSize:'cover', backgroundRepeat: 'no-repeat',}}>
-        <Form layout="vertical" className='w-400 bg-white p-2' onFinish={onFinish} >
+        <Form layout="vertical" className='w-400 bg-white p-2' onFinish={onFinish} id='register'>
 
             <h2 className='uppercase my-1'> 
                 <strong style={{color: "black"}}><span className='text-primary'>Healthy</span>-<span className='text-secondary'>Life</span> Login</strong>
@@ -64,7 +63,7 @@ function Login() {
                 <input type='password' />
             </Form.Item>
 
-            <button className='contained-btn my-1 w-full' type='submit' >Login</button>
+            <button className='contained-btn my-1 w-full btn' type='submit' >Login</button>
 
             <Link className='underline' to="/register ">
                 Don't have n account ? <strong>Sign Up</strong>

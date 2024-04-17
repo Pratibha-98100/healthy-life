@@ -22,28 +22,28 @@ function Profile() {
           {
              user.role !=="doctor" 
                 &&
-              <div className='my-1 bg-white p-1 flex flex-col gap-1'>
+              <div className='my-1 bg-white p-1 flex flex-col gap-1' style={{ backgroundColor: " grey"}}>
                 <div className='flex gap-2'>
                    <h4>
-                       <b>Name : {user.name}</b>
+                   <b className='profilename'>Name : {user.name}</b>
                     </h4>
                 </div>
 
                 <div className='flex gap-2'>
                    <h4>
-                       <b>Email : {user.email}</b>
+                       <b className='profilename'>Email : {user.email}</b>
                     </h4>
                 </div>
 
                 <div className='flex gap-2'>
                    <h4>
-                       <b>Creadted On :  { moment(user?.createdAt).format("DD-MM-YYYY   hh:mm A") }</b>
+                       <b className='profilename'>Creadted On :  { moment(user?.createdAt).format("DD-MM-YYYY   hh:mm A") }</b>
                     </h4>
                 </div>
 
                 <div className='flex gap-2'>
                    <h4>
-                       <b>Name : {user.name}</b>
+                       <b className='profilename'>Name : {user.name}</b>
                     </h4>
                 </div>
               </div>

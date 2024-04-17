@@ -1,0 +1,23 @@
+.info-bakchground h2 {
+        font-weight: 600%;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(152, 18, 18, 0.2);
+}
+
+
+.info-bakchground .label {
+    color: rgb(18, 6, 67);
+    text-shadow: 2px 2px 4px rgba(152, 18, 18, 0.2);
+    font-weight: 600;
+}
+
+
+.info-bakchground .fill{
+    color: rgb(255, 255, 248);
+}
+
+
+
+
+
+

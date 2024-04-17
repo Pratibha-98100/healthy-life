@@ -1,0 +1,21 @@
+
+
+.h-screen{
+    background-image: url(https://img.freepik.com/free-photo/medicine-blue-background-flat-lay_23-2149341573.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+
+
+/* ---tablet----- */
+@media screen and (max-width: 768px) {
+    /* 12345678 */
+
+    body{
+        width: auto;
+        
+    }
+}

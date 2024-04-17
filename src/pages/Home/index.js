@@ -4,6 +4,7 @@ import { ShowLoader } from '../../redux/loaderSlice';
 import { Col, Row, message } from 'antd';
 import { GetAllDoctors } from '../../apicalls/doctors';
 import { useDispatch } from 'react-redux';
+import "./index.css";
 
 function Home() {
 
@@ -63,32 +64,33 @@ function Home() {
         {
             doctors.map((doctor) =>{
               return (
-                <Col span={8}> 
+                // col==12 forphone version
+                <Col span={12}> 
                      <div className='bg-white p-1 flex flex-col gap-1 uppercase cursor-pointer info-bakchground'
                           onClick={() => navigate(`/book-appointment/${doctor.id}`)}
                      >
                          <div className='flex justify-between w-full'>
-                              <h2> {doctor.firstName}</h2>
+                              <h2> {doctor.firstName} {doctor.lastName} </h2>
                          </div><hr/>
 
-                         <div className='flex justify-between w-full'>
-                              <h4><b>Speciality : </b></h4>
-                              <h4> {doctor.speciality}</h4>
+                         <div className='flex justify-between w-full detaildiv'>
+                              <h4 className='label'><b>Speciality : </b></h4>
+                              <h4 className='fill'> {doctor.speciality}</h4>
                          </div>
 
-                         <div className='flex justify-between w-full'>
-                              <h4><b>Experience : </b></h4>
-                              <h4> {doctor.experience} Year</h4>
+                         <div className='flex justify-between w-full detaildiv'>
+                              <h4  className='label'><b>Experience : </b></h4>
+                              <h4 className='fill'> {doctor.experience} Year</h4>
                          </div>
 
-                         <div className='flex justify-between w-full'>
-                              <h4><b>Email : </b></h4>
-                              <h4> {doctor.email}</h4>
+                         <div className='flex justify-between w-full detaildiv'>
+                              <h4  className='label'><b>Email : </b></h4>
+                              <h4 className='fill'> {doctor.email}</h4>
                          </div>
 
-                         <div className='flex justify-between w-full'>
-                              <h4><b>Phone : </b></h4>
-                              <h4> {doctor.Phone}</h4>
+                         <div className='flex justify-between w-full detaildiv'>
+                              <h4  className='label'><b>Phone : </b></h4>
+                              <h4 className='fill'> {doctor.Phone}</h4>
                          </div>
                      </div>
                 </Col>

@@ -6,7 +6,7 @@ import {  GetDoctorById } from '../../apicalls/doctors';
 import { message } from 'antd';
 import moment from 'moment/moment';
 import { BookDoctorAppointment, GetDoctorAppointmentOnDate } from '../../apicalls/appointments';
-
+import "./index.css"
 
 function BookAppointment() {
 
@@ -49,7 +49,7 @@ function BookAppointment() {
           const day = moment(date).format("dddd");
           if(!doctor.days.includes(day)){
             return (
-                   <h3 className='text-secondary'> 
+                   <h3 className='text-secondary' style={{color:"red"}}> 
                          Doctor is not avialable on  {moment(date).format("DD-MM-YYYY")}
                    </h3>  
             )     
@@ -179,44 +179,44 @@ useEffect(() => {
 
     doctor 
       &&
-    <div className='bg-white p-2'>
-            <h1 className='uppercase my-1'> {doctor?.firstName} {doctor?.lastName}</h1>
+    <div className='bg-white p-2  particulardoc'>
+            <h1 className='uppercase my-1 docname'> {doctor?.firstName} {doctor?.lastName}</h1>
           <hr/>
 
-        <div className='w-half flex flex-col gap-1 my-1'>
-            <div className='flex justify-between w-full'>
-                <h4><b>Speciality : </b></h4>
-                <h4> {doctor.speciality}</h4>
+        <div className='w-half flex flex-col gap-1 my-1 div'>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Speciality : </b></h4>
+                <h4 className='fill'> {doctor.speciality}</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Experience : </b></h4>
-                <h4> {doctor.experience} Year</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Experience : </b></h4>
+                <h4 className='fill'> {doctor.experience} Year</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Email : </b></h4>
-                <h4> {doctor.email}</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Email : </b></h4>
+                <h4 className='fill'> {doctor.email}</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Phone : </b></h4>
-                <h4> {doctor.Phone}</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Phone : </b></h4>
+                <h4 className='fill'> {doctor.Phone}</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Address : </b></h4>
-                <h4> {doctor.address}</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Address : </b></h4>
+                <h4 className='fill'> {doctor.address}</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Fees : </b></h4>
-                <h4> {doctor.fee}/- per Session</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Fees : </b></h4>
+                <h4 className='fill'> {doctor.fee}/- per Session</h4>
             </div>
 
-            <div className='flex justify-between w-full'>
-                <h4><b>Days Avialable : </b></h4>
-                <h4> {doctor.days.join(",")}</h4>
+            <div className='flex justify-between w-full detaildiv'>
+                <h4 className='label'><b>Days Avialable : </b></h4>
+                <h4 className='fill'> {doctor.days.join(",")}</h4>
             </div>
         </div>
         <hr/>

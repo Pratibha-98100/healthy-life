@@ -19,19 +19,19 @@ function ProtectedRoute({children}) {
   return (
     <div className='layout p-1'>
         <div className='header bg-white p-2 flex jutify-between items-center background-navbar'>
-          <h2 className="cursor-pointer" onClick={()=> navigate("/")}> 
-            <strong><span className='text-primary'>Healthy</span>-<span className='text-secondary'>Life</span></strong>
-          </h2>
+          <h1 className="cursor-pointer text-primary" onClick={()=> navigate("/")}> 
+            <i>Healthy 🌍 Life</i>
+          </h1>
 
           
             {
                 user 
                   && 
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center right-div">
 
                     <div className="flex gap-1 items-center">
-                        <i className="ri-shield-user-line"></i>
-                        <h4 className='uppercase cursor-pointer underline' 
+                        <i className="ri-shield-user-line icon" style={{fontSize:"30px"}}></i>
+                        <h3 className='uppercase cursor-pointer underline profile'  style={{fontSize:"30px"}}
                              onClick={()=> {
                                  if(user.role === "admin"){
                                   navigate("/admin");
@@ -42,10 +42,9 @@ function ProtectedRoute({children}) {
                              }}
                         > 
                           {user.name} 
-                        </h4>  
+                        </h3>  
                     </div>
-
-                    <i className="ri-logout-box-r-line cursor-pointer"
+                    <i className="ri-logout-box-r-line cursor-pointer logout" style={{fontSize:"30px"}}
                          onClick={()=> {
                             localStorage.removeItem("user");
                             navigate("/login");
